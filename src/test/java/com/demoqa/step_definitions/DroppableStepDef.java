@@ -13,7 +13,8 @@ public class DroppableStepDef {
 
     @When("The user drags and drops the element")
     public void the_user_drags_and_drops_the_element() throws InterruptedException {
-        BrowserUtils.waitForVisibility(droppable.dropHere,2);
+        Thread.sleep(1000);
+        BrowserUtils.waitForVisibility(droppable.dropHere,4);
         String beforeDrag = droppable.dropHere.getText();
         Actions actions = new Actions(Driver.get());
         BrowserUtils.waitForVisibility(droppable.dropHere,2);
